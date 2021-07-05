@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+	<context:component-scan base-package="com.atguigu"></context:component-scan>
+	
+	
+	<context:property-placeholder location="classpath:dbconfig.properties"/>
+	<!--  配置数据源-->
+	<bean id="pooledDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="user" value="${jdbc.user}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
+	</bean>
+	
+	
+	<!-- 配置JdbcTemplate -->
+	<bean class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="pooledDataSource"></property>
+	</bean>
+	
+	<!-- 事务控制 -->
+	<!--1:配置事务管理器（切面）让其进行事务控制；一定导入面向切面编程的几个包  
+			spring-aspects-4.0.0.RELEASE.jar
+			com.springsource.net.sf.cglib-2.2.0.jar
+			com.springsource.org.aopalliance-1.0.0.jar
+			com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar
+	-->
+	<bean id="tm" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<!-- 控制住数据源 -->
+		<property name="dataSource" ref="pooledDataSource"></property>
+	</bean>
+	<!--2:开启基于注解的事务控制模式；依赖tx名称空间  -->
+	<tx:annotation-driven transaction-manager="tm"/>
+	<!--3:给事务方法加注解@Transactional  -->
+
+</beans>

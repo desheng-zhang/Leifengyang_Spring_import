@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Leifengyang_Spring_import.iml" filepath="$PROJECT_DIR$/.idea/Leifengyang_Spring_import.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringAOP_01/SpringAOP_01.iml" filepath="$PROJECT_DIR$/SpringAOP_01/SpringAOP_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringAOP_02/SpringAOP_02.iml" filepath="$PROJECT_DIR$/SpringAOP_02/SpringAOP_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringAOP_03_xml/SpringAOP_03_xml.iml" filepath="$PROJECT_DIR$/SpringAOP_03_xml/SpringAOP_03_xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringIOC_01/SpringIOC_01.iml" filepath="$PROJECT_DIR$/SpringIOC_01/SpringIOC_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringIOC_02/SpringIOC_02.iml" filepath="$PROJECT_DIR$/SpringIOC_02/SpringIOC_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringIOC_04/SpringIOC_04.iml" filepath="$PROJECT_DIR$/SpringIOC_04/SpringIOC_04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTX_jdbcTemplate_08/SpringTX_jdbcTemplate_08.iml" filepath="$PROJECT_DIR$/SpringTX_jdbcTemplate_08/SpringTX_jdbcTemplate_08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTx_tx01_09/SpringTx_tx01_09.iml" filepath="$PROJECT_DIR$/SpringTx_tx01_09/SpringTx_tx01_09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTx_txDetail_10/SpringTx_txDetail_10.iml" filepath="$PROJECT_DIR$/SpringTx_txDetail_10/SpringTx_txDetail_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTx_tx_xml_11/SpringTx_tx_xml_11.iml" filepath="$PROJECT_DIR$/SpringTx_tx_xml_11/SpringTx_tx_xml_11.iml" />
+    </modules>
+  </component>
+</project>
